@@ -33,4 +33,16 @@ Route::controller(SampleController::class)->group(function(){
 
     Route::get('dashboard', 'dashboard')->name('dashboard');
 
+    Route::get('home', 'home')->name('home');
+
+    Route::get('about', 'about')->name('about');
+
+    Route::get('contact', 'contact')->name('contact');
+
+    Route::get('product', 'product')->name('product');
+
+    Route::get('services', 'services')->name('services');
+
+    Route::get('faq', 'faq')->name('faq');
+
 });

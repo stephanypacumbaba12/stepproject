@@ -67,12 +67,79 @@ class SampleController extends Controller
         return redirect('login')->with('success', 'you are not allowed to access');
     }
 
+    function home()
+    {
+        if(Auth::check())
+        {
+            return view('home');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+    function contact()
+    {
+        if(Auth::check())
+        {
+            return view('contact');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+    function product()
+    {
+        if(Auth::check())
+        {
+            return view('product');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+
+    function about()
+    {
+        if(Auth::check())
+        {
+            return view('about');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+    function services()
+    {
+        if(Auth::check())
+        {
+            return view('services');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+
+    function faq()
+    {
+        if(Auth::check())
+        {
+            return view('faq');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+
+
+
+
+
     function logout()
     {
         Session::flush();
 
         Auth::logout();
 
-        return Redirect('login');
+        return Redirect('/');
     }
 }

@@ -1,4 +1,4 @@
-@extends('template.navbar')
+@extends('main')
 @section('title','CONTACT')
 
 
