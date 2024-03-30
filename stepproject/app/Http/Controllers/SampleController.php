@@ -1,23 +1,25 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
-use Hash;
-use Session;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
 class SampleController extends Controller
 {
     function index()
     {
+        if(Auth::check()) {
+            return redirect('/');
+        }
         return view('login');
     }
 
     function registration()
     {
+        if(Auth::check()) {
+            return redirect('/');
+        }
+        
         return view('registration');
     }
 
@@ -37,7 +39,7 @@ class SampleController extends Controller
             'password' => Hash::make($data['password'])
         ]);
 
-        return redirect('login')->with('success', 'Registration Completed, now you can login');
+        return redirect('login  ')->with('success', 'Registration Completed, now you can login');
     }
 
     function validate_login(Request $request)
@@ -51,20 +53,10 @@ class SampleController extends Controller
 
         if(Auth::attempt($credentials))
         {
-            return redirect('dashboard');
+            return redirect('/');
         }
 
         return redirect('login')->with('success', 'Login details are not valid');
-    }
-
-    function dashboard()
-    {
-        if(Auth::check())
-        {
-            return view('dashboard');
-        }
-
-        return redirect('login')->with('success', 'you are not allowed to access');
     }
 
     function home()
@@ -129,17 +121,10 @@ class SampleController extends Controller
         return redirect('login')->with('success', 'you are not allowed to access');
     }
 
-
-
-
-
-
     function logout()
     {
-        Session::flush();
-
         Auth::logout();
-
-        return Redirect('/');
+    
+        return redirect('/');
     }
 }

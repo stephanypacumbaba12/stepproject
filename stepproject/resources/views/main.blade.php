@@ -39,17 +39,23 @@
           <a class="dropdown-item" href="contact">Contact</a>
           <a class="dropdown-item" href="faq">FAQ</a>
           @guest
-            <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Login</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{ route('registration') }}">Register</a>
-            </li>
-            @else
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-            </li>
-            @endguest
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">Login</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('registration') }}">Register</a>
+        </li>
+        @else
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ auth()->user()->name }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+        </div>
+    </li>
+@endguest
+
         </div>
       </li>
     </ul>
