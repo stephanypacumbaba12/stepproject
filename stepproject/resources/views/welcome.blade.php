@@ -1,17 +1,19 @@
 @extends('main')
-@section('title','HOME')
-
+@section('title','WELCOME')
 
 
 
 @section('content')
-<section class="back" style="background-color: rgba(255, 255, 255, 0.8); background-image: url('images/Shoes.png'); background-size: cover; background-position: center;  height: 200vh; width: 100%; display: flex; justify-content: center; align-items: center;">
-    <div class="back-content" style="color: #ff6600; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-        <h1>Welcome to Our Shoe Store</h1>
-        <p>Discover the latest trends in footwear</p>
-        <a href="#" class="cta-btn" style="background-color: #ff6600;">Shop Now</a>
-    </div>
-</section>
+
+
+
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="video/bg.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    
 
     <section class="featured-products">
     <div class="container">
@@ -20,7 +22,7 @@
             <div class="product">
                 <img src="images/1.png" alt="Product 1">
                 <h3>Product 1</h3>
-                <p>Step into style with our versatile range of athletic sneakers,
+                <p>Step into style with our versatile range of athletic sneakers, 
                 designed to enhance your performance while keeping you on-trend wherever you go.</p>
                 <span class="price">₱999</span>
                 <a href="#" class="btn">Shop Now</a>
@@ -36,7 +38,7 @@
             <div class="product">
                 <img src="images/3.png" alt="Product 3">
                 <h3>Product 2</h3>
-                <p>Find your perfect fit for any occasion with our curated selection of trendy sandals,
+                <p>Find your perfect fit for any occasion with our curated selection of trendy sandals, 
                 offering both fashion-forward designs and durable support for all-day wear.</p>
                 <span class="price">₱2000</span>
                 <a href="#" class="btn">Shop Now</a>
@@ -45,7 +47,9 @@
         </div>
     </div>
 </section>
+ 
     
+
     <section class="benefits">
     <div class="container">
         <h2>Why Choose Us?</h2>
@@ -68,7 +72,8 @@
         </div>
     </div>
 </section>
-   
+ 
+
     <section class="testimonials">
     <div class="container">
         <h2>What Our Customers Say</h2>
@@ -90,6 +95,7 @@
     </div>
 </section>
 
+
     <section class="newsletter">
     <div class="container">
         <h2>Subscribe to Our Newsletter</h2>
@@ -100,5 +106,4 @@
         </form>
     </div>
 </section>
-
 @endsection
