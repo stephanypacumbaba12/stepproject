@@ -51,6 +51,7 @@
             {{ auth()->user()->name }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="admin">Dashboard</a>
             <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
         </div>
     </li>
