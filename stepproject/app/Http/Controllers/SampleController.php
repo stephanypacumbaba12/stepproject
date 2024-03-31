@@ -131,6 +131,17 @@ class SampleController extends Controller
         return redirect('login')->with('success', 'you are not allowed to access');
     }
 
+    function profile()
+    {
+        if(Auth::check())
+        {
+            return view('profile');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
+
+
     
     function logout()
     {

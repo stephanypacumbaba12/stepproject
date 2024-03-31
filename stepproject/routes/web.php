@@ -34,4 +34,6 @@ Route::controller(SampleController::class)->group(function(){
     Route::get('services', 'services')->name('services');
     Route::get('faq', 'faq')->name('faq');
     Route::get('admin', 'admin')->name('admin');
+    Route::get('profile', 'profile')->name('profile');
+
 });
