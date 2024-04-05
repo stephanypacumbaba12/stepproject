@@ -27,6 +27,17 @@
 						<span class="text-danger">{{ $errors->first('password') }}</span>
 					@endif
 				</div>
+				<div class="form-group mb-3">
+					<label for="user_type">User Type:</label>
+					<select name="user_type" class="form-control">
+						<option value="customer">Customer</option>
+						<option value="seller">Seller</option>
+						<option value="admin">Admin</option>
+					</select>
+					@if($errors->has('user_type'))
+						<span class="text-danger">{{ $errors->first('user_type') }}</span>
+					@endif
+				</div>
 				<div class="d-grid mx-auto">
 					<button type="submit" class="btn btn-dark btn-block">Register</button>
 				</div>
@@ -36,3 +47,4 @@
 </div>
 
 @endsection('content')
+

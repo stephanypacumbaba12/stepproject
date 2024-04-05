@@ -16,52 +16,65 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a href="/"><img src="images/logo.png" alt="Shoe E-commerce" style="width:40px; margin-left:10px;"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="home" style="margin-left:10px;">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about" style="margin-left:10px;">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="product" style="margin-left:10px;">Products</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:10px;">
-          More
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="services">Services</a>
-          <a class="dropdown-item" href="contact">Contact</a>
-          <a class="dropdown-item" href="faq">FAQ</a>
-          @guest
-        <li class="nav-item">
-        <a class="nav-link" href="{{ route('login') }}">Login</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{{ route('registration') }}">Register</a>
-        </li>
-        @else
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ auth()->user()->name }}
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="admin">Dashboard</a>
-            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
-        </div>
-    </li>
-@endguest
-
-        </div>
-      </li>
-    </ul>
-  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="home" style="margin-left:10px;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about" style="margin-left:10px;">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product" style="margin-left:10px;">Products</a>
+            </li>
+            @auth
+                @if(auth()->user()->user_type == 'admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin" style="margin-left:10px;">Dashboard</a>
+                    </li>
+                @elseif(auth()->user()->user_type == 'seller')
+                    <li class="nav-item">
+                        <a class="nav-link" href="seller-dashboard" style="margin-left:10px;">Seller Dashboard</a>
+                    </li>
+                @endif
+            @endauth
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left:10px;">
+                    More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="services">Services</a>
+                    <a class="dropdown-item" href="contact">Contact</a>
+                    <a class="dropdown-item" href="faq">FAQ</a>
+                </div>
+            </li>
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('registration') }}">Register</a>
+                </li>
+            @else
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ auth()->user()->name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @if(auth()->user()->user_type == 'customer')
+                            <a class="dropdown-item" href="profile">Profile</a>
+                        @endif
+                        <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                    </div>
+                </li>
+            @endguest
+        </ul>
+    </div>
 </nav>
+
 
 
             <main>

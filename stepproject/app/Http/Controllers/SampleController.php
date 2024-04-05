@@ -24,23 +24,25 @@ class SampleController extends Controller
     }
 
     function validate_registration(Request $request)
-    {
-        $request->validate([
-            'name'         =>   'required',
-            'email'        =>   'required|email|unique:users',
-            'password'     =>   'required|min:6'
-        ]);
+{
+    $request->validate([
+        'name'     => 'required',
+        'email'    => 'required|email|unique:users',
+        'password' => 'required|min:6',
+        'user_type' => 'required|in:customer,seller,admin' // Add validation rule for user_type
+    ]);
 
-        $data = $request->all();
+    $data = $request->all();
 
-        User::create([
-            'name'  =>  $data['name'],
-            'email' =>  $data['email'],
-            'password' => Hash::make($data['password'])
-        ]);
+    $user = new User();
+    $user->name = $data['name'];
+    $user->email = $data['email'];
+    $user->password = Hash::make($data['password']);
+    $user->user_type = $data['user_type'];
+    $user->save();
 
-        return redirect('login  ')->with('success', 'Registration Completed, now you can login');
-    }
+    return redirect('login')->with('success', 'Registration Completed, now you can login');
+}
 
     function validate_login(Request $request)
     {
