@@ -65,7 +65,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @if(auth()->user()->user_type == 'customer')
-                            <a class="dropdown-item" href="profile">Profile</a>
+                            <a class="dropdown-item" href="profile/1">Profile</a>
                         @endif
                         <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                     </div>

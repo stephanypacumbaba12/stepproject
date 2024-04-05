@@ -133,7 +133,7 @@ class SampleController extends Controller
         return redirect('login')->with('success', 'you are not allowed to access');
     }
 
-    function profile()
+    function profile($user_id)
     {
         if(Auth::check())
         {
