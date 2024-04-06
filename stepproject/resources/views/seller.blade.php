@@ -44,7 +44,7 @@
     <script src="../assets/js/config.js"></script>
   
     <head>
-        <title>Shoe E-commerce - Admin</title>
+        <title>Shoe E-commerce - Seller</title>
     </head>
 
   <body>
