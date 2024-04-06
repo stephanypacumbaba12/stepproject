@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,15 +10,17 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="{{asset('dashboard/https://fonts.gstatic.com')}}">
-	<link rel="shortcut icon" href="{{asset('dashboard/img/icons/icon-48x48.png')}}" />
+
+	<link rel="icon" href="{{asset('images/logo.png')}}">
 
 	<link rel="canonical" href="{{asset('dashboard/https://demo-basic.adminkit.io/')}}" />
-
-	<title>AdminKit Demo - Bootstrap 5 Admin Template</title>
-
 	<link href="{{asset('dashboard/css/app.css')}}" rel="stylesheet">
 	<link href="{{asset('dashboard/https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap')}}" rel="stylesheet">
-</head>
+
+	<head>
+        <title>Shoe E-commerce - Admin</title>
+    </head>
+
 
 <body>
 	<div class="wrapper">
@@ -37,14 +39,7 @@
 						<a class="sidebar-link" href="admin">
               <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
             </a>
-					</li>
-
-					<li class="sidebar-item active">
-						<a class="sidebar-link" href="profile">
-              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Profile</span>
-            </a>
-					</li>
-
+						</li>		
 </ul>
 			</div>
 		</nav>

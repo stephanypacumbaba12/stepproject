@@ -7,7 +7,7 @@
 @section('content')
 <section class="back" style="background-color: rgba(255, 255, 255, 0.8); background-image: url('images/Shoes.png'); background-size: cover; background-position: center;  height: 200vh; width: 100%; display: flex; justify-content: center; align-items: center;">
     <div class="back-content" style="color: #ff6600; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-        <h1>Welcome to Our Shoe Store</h1>
+        <h1>Welcome to Our Shoe Store {{ auth()->user()->name }}</h1>
         <p>Discover the latest trends in footwear</p>
         <a href="#" class="cta-btn" style="background-color: #ff6600;">Shop Now</a>
     </div>
