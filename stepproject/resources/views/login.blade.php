@@ -34,14 +34,14 @@
 			@csrf
               <div class="form-group first">
                 <label for="email">Email</label>
-                <input type="email"  name="name" class="form-control" placeholder="your-email@gmail.com" id="username">
+                <input type="email"  name="name" class="form-control" placeholder="Email@gmail.com" id="username">
 				@if($errors->has('email'))
 							<span class="text-danger">{{ $errors->first('email') }}</span>
 						@endif
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
-                <input type="password"  name="password" class="form-control" placeholder="Your Password" id="password">
+                <input type="password"  name="password" class="form-control" placeholder="Password" id="password">
 				@if($errors->has('password'))
 							<span class="text-danger">{{ $errors->first('password') }}</span>
 						@endif
