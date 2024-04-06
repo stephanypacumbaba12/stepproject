@@ -281,7 +281,7 @@
                               <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
                             </div>
                             <div class="d-flex flex-column">
-                              <small>2022</small>
+                              <small>2024</small>
                               <h6 class="mb-0">$32.5k</h6>
                             </div>
                           </div>
@@ -290,7 +290,7 @@
                               <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
                             </div>
                             <div class="d-flex flex-column">
-                              <small>2021</small>
+                              <small>2023</small>
                               <h6 class="mb-0">$41.2k</h6>
                             </div>
                           </div>
