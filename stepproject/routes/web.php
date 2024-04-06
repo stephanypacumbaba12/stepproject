@@ -34,6 +34,7 @@ Route::controller(SampleController::class)->group(function(){
     Route::get('services', 'services')->name('services');
     Route::get('faq', 'faq')->name('faq');
     Route::get('admin', 'admin')->name('admin');
+    Route::get('seller', 'seller')->name('seller');
 
     // Modified profile route with required parameter
     Route::get('profile/{user_id}', 'profile')->name('profile');

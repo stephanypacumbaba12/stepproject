@@ -44,7 +44,7 @@
     <script src="../assets/js/config.js"></script>
   
     <head>
-        <title>Shoe E-commerce - Profile</title>
+        <title>Shoe E-commerce - Admin</title>
     </head>
 
   <body>
@@ -56,7 +56,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="/" class="app-brand-link">
-			<img src="/images/logo.png" alt="Shoe E-commerce" style="width:40px; margin-left:10px;">
+			<img src="images/logo.png" alt="Shoe E-commerce" style="width:40px; margin-left:10px;">
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -76,7 +76,7 @@
               <ul class="menu-sub">
                 <li class="menu-item active">
                   <a href="index.html" class="menu-link">
-                    <div data-i18n="Profile">Profile</div>
+                    <div data-i18n="Analytics">Seller</div>
                   </a>
                 </li>
               </ul>

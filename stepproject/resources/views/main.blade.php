@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{asset('images/logo.png')}}">
@@ -37,7 +37,7 @@
                     </li>
                 @elseif(auth()->user()->user_type == 'seller')
                     <li class="nav-item">
-                        <a class="nav-link" href="seller-dashboard" style="margin-left:10px;">Seller Dashboard</a>
+                        <a class="nav-link" href="seller" style="margin-left:10px;">Seller Dashboard</a>
                     </li>
                 @endif
             @endauth

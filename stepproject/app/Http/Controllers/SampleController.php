@@ -70,6 +70,16 @@ class SampleController extends Controller
 
         return redirect('login')->with('success', 'you are not allowed to access');
     }
+    
+    function seller()
+    {
+        if(Auth::check())
+        {
+            return view('seller');
+        }
+
+        return redirect('login')->with('success', 'you are not allowed to access');
+    }
 
     function contact()
     {
