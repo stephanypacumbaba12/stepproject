@@ -5,10 +5,10 @@
 
 @section('content')
   
-   <section class="contact">
+<section class="contact">
     <div class="container">
         <h2 style="color: #ff6600">Contact Us</h2>
-        <form action="#" method="post">
+        <form action="#" method="post" class="contact-form">
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
