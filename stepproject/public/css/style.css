@@ -409,8 +409,14 @@ nav ul li a:hover {
     padding: 20px;
 }
 
+.card-section h1 {
+    width: 100%; /* Ensure the h1 spans the full width of the container */
+    text-align: center; /* Center-align the h1 */
+    margin-bottom: 20px; /* Add spacing below the h1 */
+}
+
 .card {
-    width: calc(33.33% - 40px); /* Adjust width for three cards with 20px padding between them */
+    width: calc(33.33% - 40px); /* Adjust width for three cards with padding between them */
     max-width: 300px; /* Limit maximum width */
     margin-bottom: 20px; /* Add spacing between cards */
     background-color: #fff;
@@ -439,13 +445,14 @@ nav ul li a:hover {
 
 @media (max-width: 992px) {
     .card {
-        width: calc(50% - 40px); /* Adjust width for two cards with 20px padding between them */
+        width: calc(50% - 40px); /* Adjust width for two cards with padding between them */
     }
 }
 
 @media (max-width: 600px) {
     .card {
-        width: calc(100% - 40px); /* Adjust width for one card with 20px padding on both sides */
+        width: calc(100% - 40px); /* Adjust width for one card with padding on both sides */
     }
 }
+
 

@@ -2,6 +2,7 @@
 @section('title','PRODUCT')
 @section('content')
 <section class="card-section">
+<h1>Product</h1>
     <div class="card">
         <img src="images/1.png" alt="Image 1">
         <div class="card-content">
