@@ -1,9 +1,5 @@
 @extends('main')
 @section('title','PRODUCT')
-
-
-
-
 @section('content')
 <section class="card-section">
     <div class="card">

@@ -13,7 +13,7 @@
     </div>
 </section>
 
-    <section class="featured-products">
+<section class="featured-products">
     <div class="container">
         <h2>Featured Products</h2>
         <div class="product-grid">
@@ -35,7 +35,7 @@
             </div>
             <div class="product">
                 <img src="images/3.png" alt="Product 3">
-                <h3>Product 2</h3>
+                <h3>Product 3</h3>
                 <p>Find your perfect fit for any occasion with our curated selection of trendy sandals,
                 offering both fashion-forward designs and durable support for all-day wear.</p>
                 <span class="price">₱2000</span>
@@ -45,6 +45,7 @@
         </div>
     </div>
 </section>
+
     
     <section class="benefits">
     <div class="container">

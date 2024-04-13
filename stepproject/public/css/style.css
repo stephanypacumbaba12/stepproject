@@ -290,7 +290,7 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    .container {
+    .container{
         flex-direction: column;
         padding: 10px 20px;
     }
@@ -325,7 +325,7 @@ nav ul li a:hover {
 }
 
 @media (max-width: 600px) {
-    .hero-content h1 {
+    .hero-content h1{
         font-size: 2.5rem;
     }
     
@@ -400,3 +400,52 @@ nav ul li a:hover {
         margin-right: 0;
     }
 }
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.card {
+    width: calc(33.33% - 40px); /* Adjust width for three cards with 20px padding between them */
+    max-width: 300px; /* Limit maximum width */
+    margin-bottom: 20px; /* Add spacing between cards */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: calc(50% - 40px); /* Adjust width for two cards with 20px padding between them */
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 40px); /* Adjust width for one card with 20px padding on both sides */
+    }
+}
+
