@@ -1,8 +1,5 @@
 @extends('main')
 @section('title','ABOUT')
-
-
-
 @section('content')
 <section class="about-us">
     <div class="container">

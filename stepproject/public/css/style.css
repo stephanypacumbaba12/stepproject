@@ -497,10 +497,11 @@ nav ul li a:hover {
 
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
-    .featured-prod .container {
+    .featured-prod .container{
         max-width: 100%; /* Adjusted max-width */
         margin-top: -70%;
     }
+
 }
 
 @media screen and (max-width: 768px) {
