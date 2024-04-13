@@ -15,7 +15,7 @@
 
     
 
-    <section class="featured-products">
+    <section class="featured-prod">
     <div class="container">
         <h2>Featured Products</h2>
         <div class="product-grid">
