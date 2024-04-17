@@ -9,7 +9,7 @@
     <div class="back-content" style="color: #ff6600; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
         <h1>Welcome to Our Shoe Store {{ auth()->user()->name }}</h1>
         <p>Discover the latest trends in footwear</p>
-        <a href="#" class="cta-btn" style="background-color: #ff6600;">Shop Now</a>
+        <a href="product" class="cta-btn" style="background-color: #ff6600;">Shop Now</a>
     </div>
 </section>
 
