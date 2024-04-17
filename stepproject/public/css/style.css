@@ -499,7 +499,7 @@ nav ul li a:hover {
 @media screen and (max-width: 1200px) {
     .featured-prod .container{
         max-width: 100%; /* Adjusted max-width */
-        margin-top: -70%;
+        margin-top: -230%;
     }
 
 }
@@ -515,3 +515,18 @@ nav ul li a:hover {
     }
 }
 
+
+.featured-pro {
+    padding: 50px 20px; /* Adjusted padding */
+    background-color: #f8f8f8;
+}
+
+.featured-pro .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-pro h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
