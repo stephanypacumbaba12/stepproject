@@ -42,3 +42,14 @@ Route::controller(SampleController::class)->group(function(){
 });
 
 //Optional Parameter
+
+
+
+
+
+//Basic Routing
+//Naming Routes
+//Required Parameters
+//Optional Parameter
+//Route Group
+//Router Resource

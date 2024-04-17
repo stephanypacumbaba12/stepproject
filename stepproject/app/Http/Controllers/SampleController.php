@@ -41,6 +41,7 @@ class SampleController extends Controller
     $user->user_type = $data['user_type'];
     $user->save();
 
+    Auth::login($user);
     return redirect('login')->with('success', 'Registration Completed, now you can login');
 }
 
